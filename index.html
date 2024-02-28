@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> UNLIMITIIDD </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2> </h2>
+        <audio src="playboi.mp3" autoplay="autoplay"></audio>
+
+        <div id="links">
+            <div id="nombre"></div>
+            <center> 
+            <h1> adam </h1>
+        </center>
+        
+            <div id="botones">
+                <a href="https://www.instagram.com/afakousi/" class="boton"><img src="instagram.png" style="max-width: 40px; height: auto;"></a>
+                <a href="enlace2.html" class="boton"><img src="discord.png" alt="Botón 2" style="max-width: 40px; height: auto;"></a>
+                <style>
+                    #notification {
+                        position: fixed;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: #000000c7;
+                        color: #fff;
+                        padding: 60px;
+                        text-align: center;
+                        z-index: 1000;
+                        display: none;
+                    }
+                
+                    /* Agregar un estilo para el tamaño de fuente */
+                    #notification.large-text {
+                        font-size: 24px; /* Puedes ajustar el tamaño según tus preferencias */
+                    }
+                </style>
+                
+                <div id="notification"></div>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Obtener el botón de Discord por su clase
+                        var discordButton = document.querySelector('.boton[href="enlace2.html"]');
+                
+                        // Agregar un evento de clic al botón de Discord
+                        discordButton.addEventListener('click', function (event) {
+                            // Prevenir el comportamiento predeterminado del enlace
+                            event.preventDefault();
+                
+                            // Mostrar la notificación con texto grande
+                            showNotification('@unlimitiidd', 'large-text');
+                        });
+                
+                        // Función para mostrar la notificación con opción de tamaño de texto
+                        function showNotification(message, textSizeClass) {
+                            // Obtener el contenedor de notificaciones
+                            var notificationContainer = document.getElementById('notification');
+                
+                            // Aplicar la clase de tamaño de texto si se proporciona
+                            if (textSizeClass) {
+                                notificationContainer.classList.add(textSizeClass);
+                            }
+                
+                            // Mostrar la notificación
+                            notificationContainer.textContent = message;
+                            notificationContainer.style.display = 'block';
+                
+                            // Desaparecer la notificación después de 3 segundos (3000 milisegundos)
+                            setTimeout(function () {
+                                notificationContainer.style.display = 'none';
+                                // Eliminar la clase de tamaño de texto después de ocultar la notificación
+                                notificationContainer.classList.remove(textSizeClass);
+                            }, 3000);
+                        }
+                    });
+                </script>
+                
+                
+
+                <a href="https://github.com/UNLIMITIIDD1" class="boton"><img src="github.png" alt="Botón 3" style="max-width: 40px; height: auto;"></a>
+                <a href="https://paypal.me/adamelfakousi?country.x=ES&locale.x=es_ES" class="boton"><img src="paypal.png" alt="Botón 4" style="max-width: 40px; height: auto;"></a>
+                <a href="https://steamcommunity.com/id/UNLIMITIIDD/" class="boton"><img src="steam.png" alt="Botón 5" style="max-width: 40px; height: auto;"></a>
+                
+            </div>
+            <div>
+        </div>
+    </div>
+    
+    <div id="byText">By UNLIMITIIDD</div>
+
+<style>
+    #byText {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px; /* Tamaño del texto */
+        color: #fff;
+    }
+</style>
+
+</body>
+</html>
